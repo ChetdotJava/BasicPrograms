@@ -1,0 +1,22 @@
+//this program calculates profit or loss -->
+import java.util.Scanner;
+public class Business {
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the cost:");
+        int cost = sc.nextInt();
+        
+        
+        System.out.printf("Enter the selling price:");
+        int price = sc.nextInt();
+
+        if(cost>price){
+            int loss = cost-price;
+            System.out.print("Loss has incurred"+"\nLoss amount:"+loss);
+        }
+        else{
+            int profit = price-cost;
+            System.out.print("Profit has incurred"+"\nProfit amount:"+profit);
+        }
+     }
+}
