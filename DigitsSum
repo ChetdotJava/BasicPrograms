@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class DisplayDigit {
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter any number:");
+        int num = sc.nextInt();
+        int numCounter = 0,sum=0;
+
+        for(;num!=0;num/=10 ){
+            int rem = num%10;
+            numCounter++;
+            sum+=rem; 
+        }
+        System.out.println("Number of digits are:"+numCounter);
+        System.out.print("Sum of digits:"+sum);
+
+    }
+}
