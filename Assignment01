@@ -1,0 +1,56 @@
+import java.util.Scanner;
+public class PW_Assignment01{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+    
+        /* Question:01 
+        This program takes 2 integer values in two variables x and y and print their product.
+        */
+        int x=4,y=5,product=x*y;
+        System.out.println("Product of these two numbers :"+product);
+        System.out.println();
+
+
+        /* Question:02
+         This program prints the ASCII value of character ‘U’
+         */
+        char c = 'U';
+        int asciiValue = c;
+        System.out.println("ASCII value of U is:"+asciiValue);
+        System.out.println();
+
+        /* Question:03
+        This Java program is to take the length and breadth of a rectangle and print its area.
+        */
+        System.out.print("Enter length of rectangle:");
+        int length = sc.nextInt();
+        System.out.print("Enter breadth of rectangle:");
+        int breadth = sc.nextInt();
+        int area = length*breadth;
+        System.out.println("Area of rectangle:"+area);
+        System.out.println();
+
+        /* Question:04
+         This Java program is to calculate the cube of a number.
+         */
+        System.out.print("Enter any number to calculate its cube:");
+        int num = sc.nextInt();
+        int cube = num*num*num;
+        System.out.println("Cube of number is:"+cube);
+        System.out.println();
+
+        /* Question:05 
+        This Java program is to swap two numbers with the help of a third variable.
+        */
+        int a = 5,b=7,temp;  
+        System.out.print("Value before swapping:"+a+" and "+b+"\n");
+        temp = a;
+        a = b;
+        b = temp;
+        System.out.println("Swapped value of 'a' and 'b':"+a+" and "+b+" respectively"); 
+
+
+
+        
+}
+}
