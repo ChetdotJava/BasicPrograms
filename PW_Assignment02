@@ -1,0 +1,84 @@
+import java.util.Scanner;
+public class PW_Assignment02{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+
+        /* Question:01
+         This program takes the input name, roll number and field of interest from user and print in the format below :
+        Name: xyz, Roll number: xyz, Field of interest: xyz
+         */
+        System.out.print("Enter your first name:");
+        String fName = sc.next();
+        System.out.print("Enter your last name:");
+        String lName = sc.next();
+        System.out.print("Enter your roll number:");
+        int rollNum = sc.nextInt();
+        System.out.print("Enter your field of interest:");
+        String interestArea = sc.next();
+        System.out.println();
+        System.out.print("Name: "+fName+" "+lName+"\n"+"Roll Number: "+rollNum+"\n"+"Field of interest: "+interestArea);
+        System.out.println("\n");
+        
+        
+        /* Question:02
+        This program takes input of two different string and print them in same line.
+        */
+        System.out.print("Enter first string:"); 
+      String s1= sc.next(); 
+      System.out.print("Enter second string:"); 
+      String s2= sc.next(); 
+      System.out.print("concatenated string:"+s1+" "+s2); 
+      System.out.println("\n");
+
+        /* Question:03
+         This program takes the marks of Robert in three subjects are entered through keyboard 
+         (each out of 100), and calculates his total marks and percentage marks.
+         */
+        int total = 0;
+         for(int i=1;i<=3;i++){
+        System.out.print("Enter marks: ");
+        int marks = sc.nextInt();
+        total+=marks;
+    }   
+        float percentage = (total/3);
+        System.out.print("Total marks: "+total+"\n"+"Percentage is: "+percentage);
+        System.out.println("\n");
+
+        /* Question:04
+         Given two numbers, return their sum in the following format:
+        Int t representing number of test cases
+        T lines of Two integers representing the numbers to be added
+         */
+        int marks1 = 0,marks2 = 0,sum = marks1 + marks2;
+        System.out.print("How many test cases are to be entered: ");
+        int n = sc.nextInt();
+        for(int i=1;i<=n;i++){
+            System.out.print("\nEnter test cases here:");
+             marks1 = sc.nextInt();
+             marks2 = sc.nextInt();
+             sum = marks1 + marks2;
+             System.out.printf("Sum is: %d",sum);
+        }
+        System.out.println("\n");
+
+        /* Question:05
+        Given few lines of input(number of lines unknown) where each line has two
+        strings, concatenate the strings.
+         */
+        System.out.print("How many pair of strings are to be entered:");
+        int t = sc.nextInt();
+        for(int i=0;i<t;i++){
+            System.out.print("Enter first string:"); 
+            String st1= sc.next(); 
+            System.out.print("Enter second string:"); 
+            String st2= sc.next(); 
+            System.out.print("concatenated string:"+st1+" "+st2); 
+            System.out.println();
+        }
+         System.out.println("\n");
+
+
+    }
+
+
+}
