@@ -1,0 +1,107 @@
+import java.util.Scanner;
+public class PW_Assignment04 {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        /* Question:01
+        Write a program which takes the values of length and breadth from user and check if it is
+        a square or not.
+         */
+        System.out.print("Enter length:");
+        short length = sc.nextShort();
+        System.out.print("Enter breadth:");
+        short breadth = sc.nextShort();
+        boolean resultant = true;
+        if(length != breadth){
+            resultant = false;
+        }
+        System.out.print("Is it a square?:"+resultant);
+        System.out.println("\n\n");
+
+        /* Question:02
+        Write a program to print absolute value of a number entered by the user.
+         */
+        System.out.print("Enter number:");
+        short number = sc.nextShort();
+        if(number < 0 ){
+            System.out.print("Absolute value of number is:"+(number*(-1)));
+        }
+        else if(number == 0){
+            System.out.print("Entered number is: 0");
+        }
+        else{
+            System.out.print("Absolute value is:"+number);
+        }
+        System.out.println("\n\n");
+
+        /* Question:03
+        Write a program to take input from user for Cost Price (C.P.) and Selling Price(S.P.) and
+        calculate Profit or Loss.
+        : Formula for profit and loss
+        Notes:--
+        Profit = S.P - C.P
+        Loss = C.P - S.P
+        (S.P is Selling Price and C.P is Cost Price)
+         */
+        System.out.print("Enter Cost Price:");
+        float cp = nextFloat();
+        System.out.print("Enter Selling Price:");
+        float sp = nextFloat();
+        if(sp>cp){
+            System.out.print("Profit of rupees:"+(sp-cp));
+        }
+        else{
+            System.out.print("Loss of rupees:"+(cp-sp));
+        }
+        System.out.println("\n\n");
+        
+        /* Question:04
+        Write a program to print positive number entered by the user, if user enters a negative
+        number, it is skipped*/
+        int num = sc.nextInt();
+        if(num > 0){
+            System.out.print("Entered number is +ve");
+        }
+        else{
+            System.out.print("Entered number is -ve");
+        }
+        System.out.println("\n\n");
+        
+        /* Question:05
+        Create a calculator using switch statement to perform addition, subtraction, multiplication
+        and division.*/
+        System.out.print("Enter first numbe:");
+        int num1 = sc.nextInt();
+        System.out.print("Enter second enter:");
+        int num2 = sc.nextInt();
+        System.out.print("Enter operation to be performed:");
+        char op = sc.next();
+        int ans=0;
+        switch(op){
+         case '+':
+        ans = num1 + num2;
+        System.out.println(num1 + " + " + num2 + " = " + ans);
+        break;
+        case '-':
+        ans = num1 - num2;
+        System.out.println(num1 + " - " + num2 + " = " + ans);
+        break;
+        case '*':
+        ans = num1 * num2;
+        System.out.println(num1 + " * " + num2 + " = " + ans);
+        break;
+        case '/':
+        ans = num1 / num2;
+        System.out.println(num1 + " / " + num2 + " = " + ans);
+        break;
+        default:
+        System.out.println("Error! The operator is not correct");
+        break;
+        }
+        System.out.println("\n\n");
+        
+        
+
+
+    }
+    
+}
