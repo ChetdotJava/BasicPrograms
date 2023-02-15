@@ -1,0 +1,68 @@
+import java.util.Scanner;
+public class PW_Assignment03{
+     public static void main(String[] args) {
+        /* Question:01 
+        Write a program to add 8 to the number x and then divide it by 3. Now, the modulus of the quotient
+        is taken with 5 and then multiply the resultant value by 5. Display the final result.
+         */
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter Number:");
+        int num = sc.nextInt(), result=0;
+        result = (((num+8)/3)%5)*5;
+        System.out.print("Result is:"+result);
+        System.out.println("\n\n");
+
+        /* Question02:
+        Swap two numbers without the use of third variable.
+        */
+        System.out.print("Enter 1st number:");
+        int x = sc.nextInt();
+        System.out.print("Enter 2nd number:");
+        int y = sc.nextInt();
+        x = x + y;
+        y = x - y;
+        x = x - y;
+        System.out.print(x);
+        System.out.print(y);
+        System.out.println("\n\n");
+
+        /* Question:03
+        Write a program to calculate the sum of the digits of a 3-digit number.
+         */
+        System.out.println("Enter number: ");
+        int sum = 0, Num = sc.nextInt();
+        for(;Num>0;Num/=10){
+            sum+=(Num%10);
+        }
+        System.out.print("Sum of digits:"+sum);
+        System.out.println("\n\n");
+
+        /* Question:04
+        Assign values of variables 'a' and 'b' as 55 and 70 respectively and then check if:
+        (i) both the conditions 'a < 50' and 'a < b' are true.
+        (ii) at least one of the conditions 'a < 50' or 'a < b' is true.
+         */
+        int a = 55,b = 7;
+        boolean Result = false;
+        if(a<50 && a<b){
+            Result = true;
+        }
+        System.out.print("Condition is:"+Result);
+        System.out.println("\n\n");
+
+        /* Question:05
+        Find the total number of bits needed to be flipped to convert x to y.
+         */
+        int p = sc.nextInt();
+        int q = sc.nextInt();
+        int n = p ^ q;
+        int count = 0;
+        while (n != 0){
+        n = n & (n - 1);
+        count++;
+        }
+        System.out.print(count);
+        System.out.println("\n\n");
+        
+    }
+}
