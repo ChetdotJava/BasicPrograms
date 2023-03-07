@@ -1,0 +1,100 @@
+import java.util.Scanner;
+public class LovelyPattern {
+    public static void printPattern(){
+    //Intended output: Capital I(WORKING)-->
+      for(int i=1;i<=5;i++){
+        System.out.print("*");
+    }
+    System.out.println();
+    for(int i=1;i<=3;i++){
+        for(int j=1;j<=2;j++){
+            System.out.print(" ");
+        }
+        for(int j=1;j<=1;j++){
+            System.out.print("*");
+        }
+        System.out.println();
+    }
+
+
+    for(int i=0;i<=5;i++){
+        System.out.print("*");
+    }
+    System.out.println ("\n");
+
+
+
+    //Intended output: Heart (testing), updated status:WORKING!!-->
+            int row=5,cols=7;
+            for(int i=0;i<=cols-1;i++){
+                if(i%3==0){
+                    System.out.print(" ");
+                }
+                else{
+                    System.out.print("*");
+                }
+            }
+            System.out.println();
+
+            for(int i=4;i>=1;i--){
+                for(int j=1;j<=(row-1)-i;j++){
+                    System.out.print(" ");
+                }
+                for(int j=1;j<=i;j++){
+                    System.out.print("*");
+                }
+                for(int j=1;j<=i-1;j++){
+                    System.out.print("*");
+                }
+                System.out.println();
+            }
+    System.out.println();
+    //Intended output: Capital U(WORKING)-->
+    for(int i=1;i<=5;i++){
+        for(int j=1;j<=2;j++)
+             { System.out.print("*");}
+        for(int j=1;j<=3;j++){
+            System.out.print(" ");
+            }
+        for(int j=1;j<=2;j++)
+            { System.out.print("*");}
+        System.out.println();}
+        for(int i=1;i<=1;i++) {
+        for (int j = 1; j <= 2; j++) {
+            System.out.print(" ");
+        }
+        for (int j = 1; j <= 3; j++) {
+            System.out.print("*");
+        }
+        System.out.println();
+        }
+}
+    public static void main(String[] args){
+        Scanner s = new Scanner(System.in);
+        jump: while(true){
+        System.out.println("Do you want to print a beautiful pattern on your screen?\nPress 'y'\nYour choice is: ");
+        char choice = s.next().charAt(0);
+        
+        if(choice == 'y'){
+        System.out.println("\nAre you EXCITED??\nLet's GOOOOOO....");
+        printPattern();
+        System.out.print("Do you wish to continue?Press 'y'\nEnter your Choice here: ");
+        char choose = s.next().charAt(0);
+        while(choose == 'y'){
+            continue jump;
+        }
+        if(choose != 'y'){
+            System.out.println("FINISHED AND EXIT!!");
+            System.exit(0);
+        }
+    }
+    else if(choice != 'y'){
+        System.out.println("FINISHED AND EXIT!!");
+        System.exit(0);
+    }
+
+    }
+
+    }
+    
+}
