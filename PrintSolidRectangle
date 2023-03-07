@@ -1,0 +1,36 @@
+import java.util.Scanner;
+public class AdvancedPattern{
+   
+    public static void printRectangle(int row){
+        int i,j;
+        for(i=1;i<=row;i++) 
+        {
+            for(j=1;j<=row-1;j++){
+                System.out.print(" ");
+                }
+            for(j=1;j<=row;j++){
+                System.out.print("*"+" ");
+            }
+            System.out.println();
+        }
+    }
+     public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        start: while(true){
+        System.out.print("Enter row: ");
+        short row = s.nextShort();
+        printRectangle(row);
+        
+        System.out.println("Do you wish to continue? Press 'y'");
+        char choice = s.next().charAt(0);
+        if(choice == 'y' || choice == 'Y'){
+            continue start;
+        }
+        else if(choice != 'y' || choice != 'Y'){
+            System.exit(0);
+        }
+    }
+}
+}
+
+
