@@ -1,98 +1,64 @@
-import java.util.Scanner;
-
-public class PW_Assignment08{
-    public static int displayAverage(int num1, int num2, int num3){
-        /*Question:01 Write a Java method to compute the average of three numbers */
-        int average = (num1 + num2 + num3)/3;
-        System.out.print("Average is= ");
-        return average;
-    }
-
-    public static void displayVowels(String myString){
-        /*Question:02 Write a Java method to count all vowels in a string */
-        int count = 0;
-        for(int ch=0; ch<myString.length(); ch++){
-            char i = myString.charAt(ch);
-            if(i=='a' || i=='e' || i=='i' || i=='o' || i=='u'){
-                count++;
+public class PW_Assignment08 {
+    /* Q1. Given an array of integers print only the positive values present in the array. */
+    public static void printPositive(int array[]){ 
+        for(int i=0; i<7; i++){
+            if(array[i] >= 0){
+                System.out.println("Positive element in array:  "+array[i]);
             }
-        }System.out.println("Total vowels in this string= "+count);
+        }
+    }
+    /* Q2. Convert the list of Strings  into an array of strings and print all
+    strings stored on odd indices of the array. */
+    public static void printAtOddIndex(String strArray[]){
+        int i=0;
+        while(i<7){
+            System.out.println("Array element: "+strArray[i]);
+            i+=2;
+        }}
+
+    /* Q3. Traverse over the elements of the array using for each loop and print all even elements. */
+    public static void printElement(int arr[]){
+        for(int element : arr){
+            if(element%2 == 0)
+            System.out.println("Element at Even Index: "+element);
+            
+        }
     }
 
-    public static void displayMiddleChar(String aString){
-        /*Question:03 Write a Java method to display the middle character of a string.
-        Note: a) If the length of the string is even there will be two middle characters.
-        b) If the length of the string is odd there will be one middle character. */
-        if(aString.length()%2 == 0){
-            char mid1 = aString.charAt((aString.length()/2)-1);
-            char mid2 = aString.charAt(aString.length()/2);
-            System.out.println("Middle Characters= "+mid1+" "+mid2);
+    /* Q4. Calculate the minimum element in the array using standard library method for calculating the minimum element. */
+    public static void printMin(int ar[]){
+        int min = 0;
+        for(int i=0; i<7 ; i++){
+            min = min<ar[i]?min:ar[i];
         }
-        else{
-            char mid = aString.charAt(aString.length()/2);
-            System.out.print("Char in the middle= "+mid);
+        System.out.println("Smallest elements: "+min);
+    }
+
+    /* Q5. Find the first peak element in the array Peak element is the one which is greater than its immediate left neighbor and its immediate right neighbor.Leftmost and rightmost element cannot be a peak element. */
+    public static void peakingArray(int[] peakArray){
+        for(int i=1; i<8; i++){
+           if(peakArray[i]>peakArray[i-1] && peakArray[i] >peakArray[i+1]){
+            System.out.println("Peak Element: "+peakArray[i]);
+           }
         }
+    }
+    
+    public static void main(String[] args) {
+        int array[] = {2,6,-5, -1, 0, 4, -9};
+        printPositive(array);
         
-    }
-
-    public static boolean isLeapYear(int year){
-        boolean isLeap = false;
-        if(year%4 == 0){
-            isLeap = true;
-        }else{
-            isLeap = false;
-        }
-        return isLeap;
-    }
-
-    public static void printGreatest(int num1, int num2, int num3){
-        if(num1>num2 && num1>num3)
-        System.out.println(num1+" is greatest");
-        else if(num2>num1 && num2>num3)
-        System.out.println(num2+" is the greatest");
-        else 
-        System.out.println(num3+" is the greatest");
-    }
-
-    public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        //Question01
-        System.out.print("Enter first num= ");
-        int x = sc.nextInt();
-        System.out.print("Enter second num= ");
-        int y = sc.nextInt();
-        System.out.print("Enter third num= ");
-        int z = sc.nextInt();
-        System.out.print(displayAverage(x, y, z));
-
-        //Question02
-        System.out.print("Enter string: ");
-        String myString = sc.nextLine();
-        displayVowels(myString);
-
-        //Question03
-        System.out.print("Enter string: ");
-        String aString = sc.nextLine();
-        displayMiddleChar(aString);
-
-        //Question04
-        System.out.print("Enter year: ");
-        int year = sc.nextInt();
-        if(isLeapYear(year) == false){
-            System.out.println("Not a leap year");
-        }else{
-            System.out.println("It's a leap year");
-        }
-
-        //Question05
-        System.out.print("Enter first num= ");
-        int a = sc.nextInt();
-        System.out.print("Enter second num= ");
-        int b = sc.nextInt();
-        System.out.print("Enter third num= ");
-        int c = sc.nextInt();
-        printGreatest(a, b, c);
         
-        sc.close();
+        String[] strArray = {"ab", "bc", "cd", "de", "ef", "fg", "gh"}; 
+        printAtOddIndex(strArray);
+        
+        
+        int[] arr = {1,2,3,4,5,6,7,8};
+        printElement(arr);
+
+        int ar[] = {2,-3, 5, 8, 1, 0, -4};
+        printMin(ar);
+
+        int[] peakArray = {1, 1, 3, 4, 2, 3, 5, 7, 0};
+        peakingArray(peakArray);
     }
 }
