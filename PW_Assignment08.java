@@ -1,64 +1,114 @@
-public class PW_Assignment08 {
-    /* Q1. Given an array of integers print only the positive values present in the array. */
-    public static void printPositive(int array[]){ 
-        for(int i=0; i<7; i++){
-            if(array[i] >= 0){
-                System.out.println("Positive element in array:  "+array[i]);
+import java.util.Scanner;
+
+/* Q1 - Write a Java method to compute the average of three numbers */
+class CalculateAverage {
+    int x, y, z;
+    public CalculateAverage(int a, int b, int c){
+        x=a; y=b; z=c;
+    }
+    public void printAverage(){
+        System.out.print("Average is: "+((x+y+z)/3)+"\n");
+    }
+    public void countVowel(String myString){
+        for(int i=0; i<myString.length(); i++){
+            if(myString.charAt(i) == 'a' || myString.charAt(i) == 'e' || myString.charAt(i) == 'i' || myString.charAt(i) == 'o' || myString.charAt(i) == 'u'){
+                System.out.print(myString.charAt(i)+"\t");
+            }
+        }
+        }
+}
+
+ /* Q2 - Write a Java method to count all vowels in a string */
+class PrintVowels{
+    public void countVowel(String myString){
+        for(int i=0; i<myString.length(); i++){
+            if(myString.charAt(i) == 'a' || myString.charAt(i) == 'e' || myString.charAt(i) == 'i' || myString.charAt(i) == 'o' || myString.charAt(i) == 'u'){
+                System.out.print("Vowel in string: ");
+                System.out.print(myString.charAt(i)+"\t");
+            }
+        }
+        }
+}
+
+/* Q3 - Write a Java method to display the middle character of a string.
+    Note: a) If the length of the string is even there will be two middle characters.
+    b) If the length of the string is odd there will be one middle character. */
+class DisplayMiddle{
+    String myString;
+    public DisplayMiddle(String s){
+        myString = s;
+    }
+    public void printMiddle(){
+        for(int i=0; i<myString.length(); ){
+            int stringLength = myString.length();
+            if(stringLength % 2 != 0){
+                System.out.println("Middle letter: "+myString.charAt(stringLength/2));
+                break;
+            }else{
+                System.out.println("Middle letters: "+myString.charAt((stringLength/2)-1)+" and "+myString.charAt(stringLength/2));
+                break;
             }
         }
     }
-    /* Q2. Convert the list of Strings  into an array of strings and print all
-    strings stored on odd indices of the array. */
-    public static void printAtOddIndex(String strArray[]){
-        int i=0;
-        while(i<7){
-            System.out.println("Array element: "+strArray[i]);
-            i+=2;
-        }}
+}
 
-    /* Q3. Traverse over the elements of the array using for each loop and print all even elements. */
-    public static void printElement(int arr[]){
-        for(int element : arr){
-            if(element%2 == 0)
-            System.out.println("Element at Even Index: "+element);
-            
+/* Q4 - Write a Java method to check whether a year (integer) entered by the user is a leap year or not. */
+class LeapYear{
+    int y;
+    public LeapYear(int year){
+        y = year;
+    }
+    public void tellLeap(){
+        if(y%4 == 0){
+            System.out.println("This is a Leap Year");
+        }else{
+            System.out.println("Not a Leap Year");
         }
     }
+}
 
-    /* Q4. Calculate the minimum element in the array using standard library method for calculating the minimum element. */
-    public static void printMin(int ar[]){
-        int min = 0;
-        for(int i=0; i<7 ; i++){
-            min = min<ar[i]?min:ar[i];
-        }
-        System.out.println("Smallest elements: "+min);
+/* Q5 - Write a Java method to find the smallest number among three numbers. */
+class SmallestNum{
+    int num1,num2,num3;
+    public SmallestNum(int a, int b, int c){
+        num1 = a; num2 = b; num3 = c;
     }
-
-    /* Q5. Find the first peak element in the array Peak element is the one which is greater than its immediate left neighbor and its immediate right neighbor.Leftmost and rightmost element cannot be a peak element. */
-    public static void peakingArray(int[] peakArray){
-        for(int i=1; i<8; i++){
-           if(peakArray[i]>peakArray[i-1] && peakArray[i] >peakArray[i+1]){
-            System.out.println("Peak Element: "+peakArray[i]);
-           }
+    public void smallestNum(){
+        if(num1<num2 && num1<num3){
+            System.out.println("Smallest is: "+num1);
+        }else if(num2<num1 && num2<num3){
+            System.out.println("Smallest is: "+num2);
+        }else{
+            System.out.println("Smallest is: "+num3);
         }
     }
-    
+}
+public class PW_Assignment08{ 
     public static void main(String[] args) {
-        int array[] = {2,6,-5, -1, 0, 4, -9};
-        printPositive(array);
+        Scanner inp = new Scanner(System.in);
         
+        System.out.print("Enter first num: ");
+        int num1 = inp.nextInt();
+        System.out.print("Enter second num: ");
+        int num2 = inp.nextInt();
+        System.out.print("Enter third num: ");
+        int num3 = inp.nextInt();
+        CalculateAverage avg = new CalculateAverage(num1, num2, num3);
+        avg.printAverage();
+        SmallestNum sNum = new SmallestNum(num1, num2, num3);
+        sNum.smallestNum();
         
-        String[] strArray = {"ab", "bc", "cd", "de", "ef", "fg", "gh"}; 
-        printAtOddIndex(strArray);
-        
-        
-        int[] arr = {1,2,3,4,5,6,7,8};
-        printElement(arr);
+        System.out.print("Enter string: ");
+        String myString = inp.nextLine();
+        PrintVowels vow = new PrintVowels();
+        vow.countVowel(myString);  
+        DisplayMiddle dMiddle = new DisplayMiddle(myString);
+        dMiddle.printMiddle();  
 
-        int ar[] = {2,-3, 5, 8, 1, 0, -4};
-        printMin(ar);
-
-        int[] peakArray = {1, 1, 3, 4, 2, 3, 5, 7, 0};
-        peakingArray(peakArray);
+        System.out.println("Enter year: ");
+        int year = inp.nextInt();
+        LeapYear lYear = new LeapYear(year);
+        lYear.tellLeap();
+        inp.close(); 
     }
 }
