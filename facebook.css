@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+}
+
+.parent{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: whitesmoke;
+}
+
+.child{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    place-items: center;
+}
+
+.child1{
+    display: grid;
+    grid-template-rows: 1fr 100px;
+    grid-template-columns: 1fr;
+    place-items: center;
+}
+
+a[id="foot"]{
+    color: black;
+    font-weight: bold;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+#logo{
+    color: #1877F2;
+    font-size: 5rem;
+    font-weight: bolder;
+}
+
+#desc{
+    font-size: 2rem;
+    font-weight:500;
+}
+
+.loginForm{
+    display: grid;
+    width: 400px;
+    place-items: center;
+    margin-top: 3rem;
+    border: 0.7rem solid white;
+    border-radius: 0.7rem;
+    background-color: white;
+    box-shadow: 1rem 1rem 1rem 0.5rem grey;
+}
+
+input[type] {
+    height: 2.7rem;
+    width: 20.5rem;
+    border: 0.1rem solid grey;
+    margin: 1rem;
+    border-radius: 0.3rem;
+    padding: 1rem;
+    font-size: large;
+}
+
+.loginForm .login , .loginForm .newAc{
+    background-color: #1877F2;
+    height: 2.7rem;
+    width: 20.5rem;
+    border-radius: 0.3rem;
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center;
+    color: whitesmoke;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.loginForm .newAc{
+    background-color: rgb(66, 183, 42);
+}
+
+.loginForm a{
+    color: #1877F2;
+    margin: 1rem;
+    padding: 4.5rem;
+    /* text-align: center; */
+}
+
+hr{
+    border: 0.1rem solid grey;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+
+
+
