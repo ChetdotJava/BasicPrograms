@@ -1,0 +1,663 @@
+*{
+    padding: 0.4rem;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* body{
+    background-color: black;
+} */
+
+ /* Navigation Bar's Code */ 
+.nav_bar{
+    margin: 0 auto; 
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 2px solid black; */
+} 
+
+.logo_and_name{
+    display: flex;
+}
+
+.logo_image{
+    height: 4.5rem;
+    width: 3.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo_name{
+    color: rgb(26, 25, 25);
+    font-size: 2.7rem;
+    font-family: 'Tangerine', serif;
+    text-shadow: 0.2rem 0.2rem 0.2rem #aaa;
+}
+
+.nav_options{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: color 1s ease-in-out 0.1ms;
+    font-size: 1.3rem;
+}
+
+.nav_options:hover{
+    color: rgba(184, 29, 245, 0.966);
+}
+
+.contact_button{
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: rgb(136, 44, 223);
+    color: whitesmoke;
+    font-weight: 700;
+    border-radius: 0.3rem;
+    border: none;
+    transition: background-color 1s ease-in-out 0.1ms;
+    font-size: 1rem;
+    padding: 0.6rem;   
+}
+
+.contact_button:hover{
+    background-color: rgba(97, 53, 138, 0.856);
+}
+
+.menu_button{
+    display: none;
+    height: 2.3rem;
+    width: 2rem;
+}
+/* Main Section's Code */
+
+.hero_section{
+    display: flex;
+    max-width: 1000px;
+    gap: 2rem;
+    margin: 0 auto;
+    /* border: 2px solid black; */
+}
+
+.left_side{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    animation: slideFromLeft 1.5s ease-in-out forwards;
+    opacity: 0;
+}
+@keyframes slideFromLeft {
+    0%{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.upper_para{
+    color: rgb(136, 44, 223);
+    font-size: 1.5rem;
+}
+
+.main_heading{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 3.3rem;
+}
+
+.main_content{
+    color: rgb(87, 87, 87);
+    margin: 0.5rem 0 1rem 0;
+    font-size: 1.3rem;
+}
+
+.inside_buttons{
+    display: flex;
+    justify-content: flex-start; 
+    gap: 7rem;
+    animation: slideFromRight 2s ease-in-out 1.5s forwards;
+    opacity: 0;
+}
+
+@keyframes slideFromRight {
+    0%{
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.start_now_button{
+    background-color: rgb(136, 44, 223);
+    color: whitesmoke;
+    font-weight: 700;
+    border-radius: 0.5rem;
+    border: none;
+    transition: background-color 1s ease-in-out 0.1ms;
+    font-size: 1.3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.start_now_button:hover{
+    background-color: rgba(97, 53, 138, 0.856);
+}
+
+.take_tour_button{
+    background-color: rgb(37, 37, 37);
+    color: whitesmoke;
+    font-weight: 700;
+    border-radius: 0.5rem;
+    border: none;
+    transition: background-color 1s ease-in-out 0.1ms;
+    font-size: 1.3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.take_tour_button:hover{
+    background-color: rgb(85, 84, 84);
+}
+
+.mount_img{
+    height: 20rem;
+    width: 20rem;
+    border-radius: 2rem;
+    animation: slideFromRight 1.5s backwards 1s ;
+}
+
+#our_partners{
+    animation: bigIn 2.5s 1s ease-in-out forwards;
+}
+
+.partners_list{
+    display: grid;
+    grid-template-rows: repeat(1,1fr);
+    grid-template-columns: repeat(4,1fr);
+    /* border: 1px solid black; */
+    max-width: 850px;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.trusted_partner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.partner_img{
+    height: 4rem;
+    width: 4rem;
+    animation: slideUp 2s ease-in-out 1s forwards;
+    opacity: 0;
+}
+
+.img_text{
+    font-size: 1.7rem;
+    /* border: 1px solid black; */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(77, 81, 109);
+    opacity: 0;
+    animation: slideUp 2s ease-in-out 2s forwards;
+}
+
+@keyframes slideUp {
+    0%{
+        opacity: 0;
+        transform: scale(0,0);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1,1);
+    }
+}
+
+/* Our Advantages */
+.advatanges_intro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    font-weight: 520;
+    font-size: 1.5rem;
+    color: rgb(136, 44, 223);
+    padding: 1.3rem;
+    font-weight: 570;
+    animation: 2s ease-in-out 3s slideIn forwards;
+    opacity: 0;
+}
+
+@keyframes slideIn{
+    0%{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+.advantages_section{
+    margin: 0 auto;
+    display: grid;
+    row-gap: 2.3rem;
+    grid-template-columns: repeat(2,0.5fr);
+    grid-template-rows: repeat(3,0.3fr);
+    max-width: 700px;
+}
+
+.our_advantages{
+    display: flex;
+    row-gap: 1.5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 20rem;
+    width: 15rem;
+    margin: 0 auto;
+    border: none;
+    border-radius: 2rem;
+    box-shadow: -0.8rem -0.8rem 1rem 0.0001rem grey;
+    opacity: 0;
+    animation: runIn 4s ease-in-out 5s forwards;
+    transition: box-shadow 1s ease-in-out 0.9s;
+}
+
+.our_advantages:hover{
+    box-shadow: -1rem -1rem 1.2rem 0.0005rem black;
+}
+
+@keyframes runIn {
+    0%{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    80%{
+        opacity: 1;
+        transform: skew(1deg,-5deg);
+    }
+    100%{
+        opacity: 1;
+        transform: skew(0deg) , translateX(0%);
+    }
+}
+
+.adv_img{
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 25%;
+}
+
+.adv_heading{
+    font-size: larger;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    font-weight: 550;
+    color: aliceblue;
+    text-shadow: 2px 2px black;
+}
+
+.adv_explained{
+    text-align: center;
+    color: whitesmoke;
+    font-weight: 500;
+    padding: 1rem;
+}
+
+#flexible_learning{
+    background-color: #D14D72;
+    color: black;
+}
+
+#pioneer_content{
+    background-color: #176B87;
+    color: black;
+}
+
+#industry_expert{
+    background-color: #C21292;
+}
+
+#practical_experience{
+    background-color: #872341;
+}
+
+#curriculum{
+    background-color: #c82b28;
+}
+
+#career_support{
+    background-color: #090580;
+}
+
+.testimonial_intro , .our_partners , .copyright_section{
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    color: #727272;
+    font-size: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    animation: bigIn 2.5s 10s ease-in-out forwards;
+    opacity: 0;
+}
+
+@keyframes bigIn {
+    0%{
+        opacity: 0;
+    }
+    1%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+        transform: perspective(100rem) translateZ(20rem);
+    }
+}
+
+.testimonial_intro:hover{
+    transform: perspective(100rem) translateZ(30rem);
+}
+
+.testimonials_section{
+    margin: 0 auto;
+    max-width: 1100px;
+    display: grid;
+    grid-template-rows: repeat(auto);
+    grid-template-columns: repeat(auto-fill, minmax(350px,1fr));
+}
+
+.testimonials{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0.1rem 0.1rem 1rem 0.2rem #392467;
+    border-radius: 2.5rem;
+    background-color: #310e68;
+    background: linear-gradient(68.7deg, rgb(235, 217, 221) 8%, rgb(216, 174, 211) 55.4%, rgb(190, 171, 255) 91.1%);
+    transition: box-shadow 2s ease-in-out 0.5ms;
+}
+
+#first_person{
+    animation: slideFromLeft 2s 11s ease-in-out forwards;
+    opacity: 0;
+}
+
+#second_person{
+    opacity: 0;
+    animation: comeDown 2s 12s ease-in-out forwards;
+}
+
+@keyframes comeDown {
+    0%{
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+#third_person{
+    animation: slideFromRight 2s ease-in-out 13s forwards;
+    opacity: 0;
+}
+
+.testimonials:hover{
+    box-shadow: 0.3rem 0.3rem 1.3rem 0.5rem #0f022c;   
+}
+
+.person_img{
+    border-radius: 3rem;
+    height: 5rem;
+    width: 5rem;
+}
+
+.person_name{
+    font-size: 1.5rem;
+    color: white;
+    text-shadow: 0.3rem 0.3rem 1.7rem black;
+}
+
+.person_occupation{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: black;
+    text-shadow: 0.2rem 0.2rem 0.7rem whitesmoke;
+}
+
+.what_says{
+font-family: Georgia, 'Times New Roman', Times, serif;
+font-weight: 547;
+}
+
+/* Newsletter section */
+.newsletter_section{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    opacity: 0;
+    animation: comeDown 2s 15s ease-in-out forwards;
+}
+
+.newsletter_img{
+    height: 25rem;
+    width: 30rem;
+    border-radius: 2rem;
+}
+
+.subscribe_newsletter{
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    gap: 1.6rem;
+}
+
+.get_updates{
+    font-size: 2.3rem;
+    color: rgb(136, 44, 223);
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.get_updates_desc{
+    color: #392467;
+    font-size: 1.366rem;
+}
+
+.submit_mail{
+    display: flex;
+    justify-content: space-between;
+}
+
+.enter_mail{
+    width: 18rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+input[type="mail"]::placeholder{
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:#392467;
+}
+
+.submit_mail_button{
+    background-color: rgb(136, 44, 223);
+    color: whitesmoke;
+    font-weight: 700;
+    border-radius: 0.3rem;
+    border: none;
+    transition: background-color 1s ease-in-out 0.1ms;
+    font-size: 1rem;
+    padding: 0.4rem 0.7rem 0.4rem 0.7rem;
+    width: 5rem;
+}
+.submit_mail_button:hover{
+    background-color: rgba(97, 53, 138, 0.856);
+}
+
+.terms_policy_notice{
+    font-size: 1.4rem;
+    color: #310e68;
+}
+
+.terms_condition{
+    color: #52D3D8;
+}
+
+/* footer section */    
+.footer_section{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(auto);
+}
+
+.footer_elements{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+    animation: blurOut 4.5s 16s ease-in-out forwards;
+    opacity: 0;
+}
+
+@keyframes blurOut {
+    0%{
+        opacity: 0;
+        transform: perspective(1000rem) translateZ(-100%);
+    }
+    1%{
+        opacity: 0.2;
+        transform: perspective(1000rem) translateZ(95%);
+    }
+    50%{
+        opacity: 0.5;
+        transform: perspective(1000rem) translateZ(50%);
+    }
+    100%{
+        opacity: 1;
+        transform: perspective(1000rem) translateZ(0%);
+    }
+}
+
+.logo_desc_footer{
+    color: rgb(136, 44, 223);
+    font-size: 1.3rem;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.social_media{
+    width: 3.2rem;
+    height: 3.2rem;
+}
+
+.footer_elements_heading , .footer_elements_details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7rem;
+    text-align: center;
+    color: #5B0888;
+    font-weight: 560;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.footer_elements_details{
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #BC7AF9;
+}
+
+/* Copyright section */
+.copyright_section{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 1.1rem;
+    color: #009FBD;
+    animation: bigIn 3s 17s ease-in-out forwards;
+    opacity: 0;
+}
+/* To make the webpage responsive */
+@media screen and (max-width:770px) {
+    .contact_button{
+        display: none;
+    }
+
+    .nav_options{
+        display: none;
+    }
+
+    .menu_button{
+        display: grid;
+    }
+
+    .hero_section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .left_side{
+        text-align: center;
+    }
+
+    .inside_buttons{
+        display: flex;
+        justify-content: center;
+    }
+
+    .partners_list{
+        display: grid;
+        grid-template-rows: repeat(2,1fr);
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .advantages_section{
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .newsletter_section{
+        background-color: #bb9bff;
+        border-radius: 1rem;
+    }
+
+    .newsletter_img{
+        display: none;
+    }
+
+    .terms_policy_notice{
+        color: #0f022c;
+    }
+
+    .terms_condition{
+        color: aquamarine;
+    }
+
+    .footer_section{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(5,1fr);
+    }
+
+}
+
+
+
